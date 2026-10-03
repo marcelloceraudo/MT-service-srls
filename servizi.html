@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Corsi di formazione sulla sicurezza sul lavoro, attestati, patentini e consulenza documentale DVR - MT Service.">
+    <title>Servizi e Corsi - MT Service</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- STILI SPECIFICI PER PAGINA SERVIZI --- */
+        .page-header-simple {
+            padding: 2.5rem 5% 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-header-simple h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .page-header-simple p {
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        .services-container {
+            max-width: 1200px;
+            margin: 2.5rem auto;
+            padding: 0 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1.8rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .service-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+            border-color: var(--accent);
+        }
+
+        .service-icon {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card h2 {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: #475569;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+
+        .service-list li {
+            font-size: 0.9rem;
+            color: #475569;
+            padding-left: 1.2rem;
+            position: relative;
+            margin-bottom: 0.4rem;
+        }
+
+        .service-list li::before {
+            content: "•";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .btn-service {
+            display: inline-block;
+            text-align: center;
+            background-color: var(--light);
+            color: var(--primary);
+            font-weight: 600;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            text-decoration: none;
+            border: 1px solid #cbd5e1;
+            transition: all 0.2s ease;
+        }
+
+        .btn-service:hover {
+            background-color: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGAZIONE -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">🛡️ MT <span style="color: var(--accent);">Service</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Apri menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="servizi.html" class="active">Servizi e Corsi</a>
+                <a href="normativa.html">Normativa</a>
+                <a href="contatti.html">Contattaci</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- INTESTAZIONE -->
+    <div class="page-header-simple">
+        <h1>I Nostri Servizi e Corsi di Formazione</h1>
+        <p>Soluzioni complete e personalizzate per la sicurezza nei luoghi di lavoro e la formazione professionale.</p>
+    </div>
+
+    <!-- CONTENUTO SERVIZI -->
+    <main class="services-container">
+
+        <!-- CARD 1 -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon">🧑‍💼</div>
+                <h2>Figure della Sicurezza (D.Lgs. 81/08)</h2>
+                <p>Corsi obbligatori per la formazione e l'aggiornamento di tutte le figure responsabili della sicurezza aziendale.</p>
+                <ul class="service-list">
+                    <li>RSPP (Datore di Lavoro)</li>
+                    <li>RLS (Rappresentante Lavoratori)</li>
+                    <li>Preposto e Dirigente</li>
+                    <li>Formazione Generale e Specifica Lavoratori</li>
+                </ul>
+            </div>
+            <a href="contatti.html?servizio=figure-sicurezza" class="btn-service">Richiedi Info</a>
+        </article>
+
+        <!-- CARD 2 -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon">🧯</div>
+                <h2>Gestione Emergenze</h2>
+                <p>Addestramento pratico e teorico per la gestione delle emergenze e il primo intervento nei luoghi di lavoro.</p>
+                <ul class="service-list">
+                    <li>Addetto Antincendio (Livelli 1, 2 e 3)</li>
+                    <li>Addetto Primo Soccorso (Gruppi A, B, C)</li>
+                    <li>Esercitazioni pratiche e prove di evacuazione</li>
+                </ul>
+            </div>
+            <a href="contatti.html?servizio=emergenze" class="btn-service">Richiedi Info</a>
+        </article>
+
+        <!-- CARD 3 -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon">🚜</div>
+                <h2>Patentini Macchine e Attrezzature</h2>
+                <p>Formazione abilitante conforme all'Accordo Stato-Regioni per l'uso di attrezzature da lavoro.</p>
+                <ul class="service-list">
+                    <li>Carrelli Elevatori (Muleto)</li>
+                    <li>Piattaforme Aeree (PLE)</li>
+                    <li>Gru su Autocarro e Gru A Torre</li>
+                    <li>Escavatori, Pale e Trattori Agricoli</li>
+                </ul>
+            </div>
+            <a href="contatti.html?servizio=attrezzature" class="btn-service">Richiedi Info</a>
+        </article>
+
+        <!-- CARD 4 -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon">📋</div>
+                <h2>Consulenza Documentale e DVR</h2>
+                <p>Redazione e aggiornamento di tutta la documentazione obbligatoria per la conformità aziendale.</p>
+                <ul class="service-list">
+                    <li>Documento Valutazione Rischi (DVR)</li>
+                    <li>POS (Piano Operativo di Sicurezza)</li>
+                    <li>DUVRI e PIMUS per i cantieri</li>
+                    <li>Audit aziendali e check-up sicurezza</li>
+                </ul>
+            </div>
+            <a href="contatti.html?servizio=dvr" class="btn-service">Richiedi Info</a>
+        </article>
+
+        <!-- CARD 5 -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon">🩺</div>
+                <h2>Medicina del Lavoro</h2>
+                <p>Gestione completa della sorveglianza sanitaria in azienda con Medico Competente nominato.</p>
+                <ul class="service-list">
+                    <li>Nomina del Medico Competente</li>
+                    <li>Visite preventive e periodiche</li>
+                    <li>Rilascio idoneità lavorativa</li>
+                    <li>Istituzione Cartelle Sanitarie</li>
+                </ul>
+            </div>
+            <a href="contatti.html?servizio=medicina" class="btn-service">Richiedi Info</a>
+        </article>
+
+        <!-- CARD 6 -->
+        <article class="service-card">
+            <div>
+                <div class="service-icon">🍕</div>
+                <h2>Igiene Alimentare e HACCP</h2>
+                <p>Consulenza e corsi dedicati alle attività del settore alimentare per il rispetto delle norme igienico-sanitarie.</p>
+                <ul class="service-list">
+                    <li>Corsi Operatore Settore Alimentare (OSA)</li>
+                    <li>Redazione Manuale Autocontrollo HACCP</li>
+                    <li>Tamponi di superficie e analisi alimenti</li>
+                </ul>
+            </div>
+            <a href="contatti.html?servizio=haccp" class="btn-service">Richiedi Info</a>
+        </article>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>MT Service</h4>
+                <p>Consulenza e Formazione Aziendale Integrata.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="servizi.html">Servizi e Corsi</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti Diretti</h4>
+                <p>Email: <a href="mailto:mtservicesrls@gmail.com" style="color: inherit; text-decoration: none;">mtservicesrls@gmail.com</a></p>
+                <p>Tel: <a href="tel:+390962434429" style="color: inherit; text-decoration: none;">+39 0962434429</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MT Service. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- TASTO FLOTTANTE WHATSAPP -->
+    <a href="https://wa.me/390962434429?text=Buongiorno,%20vorrei%20informazioni%20sui%20vostri%20servizi." class="whatsapp-float" target="_blank" aria-label="Contattaci su WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>Richiedi Info su WhatsApp</span>
+    </a>
+
+    <!-- JAVASCRIPT: MENU MOBILE -->
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

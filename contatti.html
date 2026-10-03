@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contatta MT Service per informazioni sui corsi di formazione e consulenza sulla sicurezza sul lavoro.">
+    <title>Contattaci - MT Service</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* --- STILI SPECIFICI PER PAGINA CONTATTI --- */
+        .page-header-simple {
+            padding: 2.5rem 5% 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .page-header-simple h1 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .page-header-simple p {
+            color: var(--gray);
+            font-size: 1.05rem;
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 2.5rem auto;
+            padding: 0 5%;
+        }
+
+        .contact-form-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: #1e293b;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+            box-sizing: border-box;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(243, 156, 18, 0.15);
+        }
+
+        .btn-submit {
+            width: 100%;
+            background-color: var(--accent);
+            color: #ffffff;
+            border: none;
+            padding: 0.85rem 1.5rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGAZIONE -->
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo">🛡️ MT <span style="color: var(--accent);">Service</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Apri menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="chi-siamo.html">Chi Siamo</a>
+                <a href="servizi.html">Servizi e Corsi</a>
+                <a href="normativa.html">Normativa</a>
+                <a href="contatti.html" class="active">Contattaci</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- INTESTAZIONE -->
+    <div class="page-header-simple">
+        <h1>Richiedi Informazioni</h1>
+        <p>Compila il modulo sottostante per richiedere un preventivo o maggiori informazioni sui nostri servizi.</p>
+    </div>
+
+    <!-- MODULO DI CONTATTO CON INVIO AUTOMATICO EMAIL -->
+    <main class="contact-container">
+        <div class="contact-form-card">
+            <form action="https://formsubmit.co/mtservicesrls@gmail.com" method="POST">
+                <!-- Configurazioni per l'invio email via FormSubmit -->
+                <input type="hidden" name="_subject" value="Nuova richiesta dal sito web MT Service">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_captcha" value="false">
+
+                <div class="form-group">
+                    <label for="nome">Nome e Cognome / Ragione Sociale *</label>
+                    <input type="text" id="nome" name="Nome_e_Cognome" required placeholder="Inserisci il tuo nome o ragione sociale">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email di Contatto *</label>
+                    <input type="email" id="email" name="Email" required placeholder="es. nome@azienda.it">
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono *</label>
+                    <input type="tel" id="telefono" name="Telefono" required placeholder="es. 333 1234567">
+                </div>
+
+                <div class="form-group">
+                    <label for="servizio">Servizio di Interesse</label>
+                    <select id="servizio" name="Servizio_Richiesto">
+                        <option value="Informazioni Generali">Informazioni Generali</option>
+                        <option value="Sicurezza D.Lgs 81/08">Sicurezza D.Lgs 81/08 (RSPP, RLS, Preposto)</option>
+                        <option value="Squadra di Emergenza">Squadra di Emergenza (Antincendio / Primo Soccorso)</option>
+                        <option value="Patentini Macchine">Patentini Macchine e Attrezzature</option>
+                        <option value="Medicina del Lavoro">Medicina del Lavoro e Sorveglianza Sanitaria</option>
+                        <option value="HACCP e Alimentare">HACCP e Igiene Alimentare</option>
+                        <option value="Redazione DVR">Redazione DVR / Consulenza Documentale</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="messaggio">Messaggio o Richiesta *</label>
+                    <textarea id="messaggio" name="Messaggio" rows="5" required placeholder="Descrivi brevemente la tua richiesta o le tue esigenze..."></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Invia Richiesta</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>MT Service</h4>
+                <p>Consulenza e Formazione Aziendale Integrata.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Link Rapidi</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="chi-siamo.html">Chi Siamo</a></li>
+                    <li><a href="servizi.html">Servizi e Corsi</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contatti Diretti</h4>
+                <p>Email: <a href="mailto:mtservicesrls@gmail.com" style="color: inherit; text-decoration: none;">mtservicesrls@gmail.com</a></p>
+                <p>Tel: <a href="tel:+390962434429" style="color: inherit; text-decoration: none;">+39 0962434429</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 MT Service. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- TASTO FLOTTANTE WHATSAPP -->
+    <a href="https://wa.me/390962434429?text=Buongiorno,%20vorrei%20informazioni%20sui%20vostri%20servizi." class="whatsapp-float" target="_blank" aria-label="Contattaci su WhatsApp">
+        <svg class="whatsapp-icon" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span>Richiedi Info su WhatsApp</span>
+    </a>
+
+    <!-- JAVASCRIPT: MENU MOBILE E PRE-SELEZIONE SERVIZIO -->
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const servizioParam = urlParams.get('servizio');
+            if (servizioParam) {
+                const selectElement = document.getElementById('servizio');
+                if (selectElement) {
+                    for (let option of selectElement.options) {
+                        if (option.value.toLowerCase().includes(servizioParam.toLowerCase())) {
+                            option.selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
